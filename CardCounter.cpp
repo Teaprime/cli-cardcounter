@@ -26,12 +26,15 @@ static void printCount(int count, int cardscounted, int decks) {
 
 int main()
 {
+    std::string output = "";
+
     double decks = 1;
     std::cout << "Number of decks: ";
     std::cin >> decks;
     if (decks == 0) {
         decks = 1;
     }
+    output += "Decks:" + std::to_string(decks);
 
     boolean doOutput = false;
     {
@@ -90,7 +93,6 @@ int main()
     printCount(count, cardscounted, decks);
 	std::cout << promptMessage;
 
-    std::string output = "";
     while (run) {
         boolean print = false;
         char symbol;
